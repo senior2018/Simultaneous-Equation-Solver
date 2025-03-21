@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simultaneous Equations Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simultaneous Equations Solver</h2>
+        <label for="equationType">Select Equation Type:</label>
+        <select id="equationType" onchange="toggleEquationType()">
+            <option value="2x2">2 Equations (2x2)</option>
+            <option value="3x3">3 Equations (3x3)</option>
+        </select>
+
+        <!-- 2x2 Inputs -->
+        <div id="equation2x2">
+            <p><b>ax + by = c</b></p>
+            <input type="number" id="a" placeholder="a">
+            <input type="number" id="b" placeholder="b">
+            <input type="number" id="c" placeholder="c">
+            <p><b>dx + ey = f</b></p>
+            <input type="number" id="d" placeholder="d">
+            <input type="number" id="e" placeholder="e">
+            <input type="number" id="f" placeholder="f">
+        </div>
+
+        <!-- 3x3 Inputs -->
+        <div id="equation3x3" style="display: none;">
+            <p><b>ax + by + cz = d</b></p>
+            <input type="number" id="a1" placeholder="a1">
+            <input type="number" id="b1" placeholder="b1">
+            <input type="number" id="c1" placeholder="c1">
+            <input type="number" id="d1" placeholder="d1">
+
+            <p><b>ex + fy + gz = h</b></p>
+            <input type="number" id="a2" placeholder="a2">
+            <input type="number" id="b2" placeholder="b2">
+            <input type="number" id="c2" placeholder="c2">
+            <input type="number" id="d2" placeholder="d2">
+
+            <p><b>ix + jy + kz = l</b></p>
+            <input type="number" id="a3" placeholder="a3">
+            <input type="number" id="b3" placeholder="b3">
+            <input type="number" id="c3" placeholder="c3">
+            <input type="number" id="d3" placeholder="d3">
+        </div>
+
+        <button onclick="solveEquations()">Solve</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

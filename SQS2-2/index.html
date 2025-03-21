@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simultaneous Equation Solver</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simultaneous Equation Solver</h1>
+    <p>Enter the coefficients for two linear equations:</p>
+    <form id="equationForm">
+      <div class="equation">
+        <input type="number" id="a1" placeholder="a₁">x + 
+        <input type="number" id="b1" placeholder="b₁">y = 
+        <input type="number" id="c1" placeholder="c₁">
+      </div>
+      <div class="equation">
+        <input type="number" id="a2" placeholder="a₂">x + 
+        <input type="number" id="b2" placeholder="b₂">y = 
+        <input type="number" id="c2" placeholder="c₂">
+      </div>
+      <button type="button" onclick="solveEquations()">Solve</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
